@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="box1">My name is ajay kumar sah</h1>
+    <span class="normalheadding">Welcome ajay kumar sah</span>
+    <p class="normalheadding">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, corporis!</p>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Service</li>
+    </ul>
+
+    <script>
+       const box1 =  document.getElementById('box1')
+       console.log(box1)
+       const op =  box1.innerText = "Good work ajay"
+       console.log(op)
+       box1.style.color = "red"
+       box1.id = "box2"
+       box1.className = "headding"
+       box1.setAttribute("title", "ajay kumar")
+       box1.setAttribute("class","ajay heading")
+       let b = box1.getAttribute('id')
+       let f = box1.getAttribute('class')
+       console.log(b)
+       console.log(f)
+       const id = box1.id
+       const classes = box1.className
+       console.log(id)
+       console.log(classes)
+
+      
+
+     const normalheadding = document.getElementsByClassName('normalheadding')
+     console.log(normalheadding)
+    //  normalheadding[0].style.color = "red"
+    //  normalheadding[0].style.fontSize = "40px"
+    //  normalheadding[1].style.backgroundColor = "yellow"
+    //  const b = normalheadding[0].textContent = "ji"
+    //  console.log(b)
+
+    //  for(let i=0; i<normalheadding.length; i++){
+    //     normalheadding[i].style.color="red"
+    //     normalheadding[i].style.backgroundColor = "yellow"
+    //  }
+
+     normalheadding.forEach(function(e){
+        e.style.color = "red"
+     })
+
+     
+
+
+
+
+       
+
+    </script>
+</body>
+</html>

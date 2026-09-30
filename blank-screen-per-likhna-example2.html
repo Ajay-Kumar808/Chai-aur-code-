@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let h1 = document.createElement('h1')
+             console.log(h1)
+            let add =  document.createTextNode("Ajay Kumar Sah")
+           h1.appendChild(add)
+                    console.log(add)
+
+                    h1.setAttribute('title', "title")
+                    h1.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNaaLCHrXaweDA3mEVmrIVlcPEUahd7ee8NJu44d97gls0ZtxKshpg_4OV&s=10")
+
+                    h1.appendChild(add)
+                    document.body.appendChild(h1)
+
+
+                const image = document.createElement("img")
+                console.log(image)
+
+                image.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNaaLCHrXaweDA3mEVmrIVlcPEUahd7ee8NJu44d97gls0ZtxKshpg_4OV&s=10")
+
+                // image.appendChild()
+                document.body.appendChild(image)
+    </script>
+</body>
+</html>

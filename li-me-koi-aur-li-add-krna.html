@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+    <script>
+        function addLanguage(langName) {
+            const li = document.createElement('li')
+            console.log(li)
+            //   li.textContent = "java"
+            //  document.body.appendChild(li)
+
+            li.innerHTML = `${langName}`
+            document.querySelector('.language').appendChild(li)
+
+        }
+        addLanguage("ajay")
+        addLanguage("typelanguage")
+
+
+        function addOpLanguage(langName) {
+            const li = document.createElement('li')
+            console.log(li)
+          
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li)
+            
+        }
+        addOpLanguage("Mern Stack")
+
+
+
+        // Eddit
+
+        const add = document.querySelector('li:nth-child(2)')
+        console.log(add)
+        // add.textContent = "ajay kumar sah" 
+
+
+        // iska matlab hai element banaker replace kro
+       const newLi = document.createElement('li')
+       newLi.textContent = "Mojo"
+       add.replaceWith(newLi)
+
+
+       const firstLang = document.querySelector("li:first-child")
+       console.log(firstLang)
+       firstLang.outerHTML =  `<li>typejavascript</li>`
+
+
+
+    //    remove
+  const lastLang =  document.querySelector('li:last-child')
+  console.log(lastLang)
+  lastLang.remove()
+    </script>
+</body>
+
+</html>
