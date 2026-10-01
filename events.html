@@ -70,7 +70,7 @@
       delete1.addEventListener('click', function(e){
         console.log(e.target.tagName)
         if(e.target.tagName === 'IMG'){
-            let removeIt = e.target.parentNode  
+            let removeIt = e.target.parentNode  /* parentNode ka matlab hai <li></li> ye wala */
         removeIt.remove() 
         }
         // console.log(e.target.parentNode);
