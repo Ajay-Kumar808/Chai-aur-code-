@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200" onclick="alert('hello')" id="photoshop1" src="https://img.magnific.com/free-photo/smiling-young-woman-holding-retro-camera_329181-142.jpg?semt=ais_hybrid&w=740&q=80" alt="" ></li>
+            <li><img width="200" id="photoshop2" src="https://img.magnific.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_hybrid&w=740&q=80" alt="" ></li>
+            <li><img width="200" id="photoshop3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOYvQs_n_fIqfduy9oMhjkC2OQ5bZf2kUroJVvn8xq7dpvtyk42QMdGhLd&s=10" alt="" ></li>
+            <li><img width="200" id="photoshop4" src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp" alt="" ></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+
+
+    <script>
+        const photoshop2 = document.getElementById('photoshop2')
+        console.log(photoshop2)
+         photoshop2.onclick = function(){  /*onclick kaam feature de teta hai*/
+            alert("hello ajay")
+         }
+
+         const photoshop3 = document.getElementById('photoshop3')
+         photoshop3.addEventListener('click', function(e){
+            console.log(e)
+            console.log(e.target)
+            alert("Kaise ho ajay ji")
+         })
+
+         const image = document.getElementById('images')
+         console.log(image)
+         image.addEventListener('click', function(e){
+            console.log("click inside the ul")
+         }, false)  /*By default me true ke jgah per false hota hai  ager aap false krte hai to phle li click hoga pbir ul click hoga */
+
+         /* lakin jab aap true rakhte hai to phle ul click hoga phir li click hoga */
+         /* true ho to top to buttom print hota hai*/
+         /* false ho to buttom to top print hota hai*/
+
+         /* aise event ko booble event khte hai*/
+         const photoshop4 = document.getElementById('photoshop4')
+         console.log(photoshop4)
+         photoshop4.addEventListener('click', function(e){
+            console.log("photoshop4 was clicked")
+            e.stopPropagation()
+            /*jab aap stopPropagation ka istmaal krte hai to aap ji bhi li per click krege to shrip ohi li click hoga*/
+
+            /*uper wala ul click nhi hoga ye*/
+
+            /*jab aap stopPropagation ka istmaal kroge to dono jaga false hona chahiye */
+         }, false)
+
+
+         const google = document.getElementById('google')
+         console.log(google)
+         google.addEventListener('click', function(e){
+             e.preventDefault()
+             console.log("google clicked")
+         },false)
+
+
+
+      const delete1 =  document.querySelector('#images')
+      console.log(delete1)
+      delete1.addEventListener('click', function(e){
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG'){
+            let removeIt = e.target.parentNode  
+        removeIt.remove() 
+        }
+        // console.log(e.target.parentNode);
+        // let removeIt = e.target.parentNode  
+        // removeIt.remove()   /**/
+        // removeIt.parentNode.removeChild(removeIt)
+      },false)
+    </script>
+</body>
+</html>
