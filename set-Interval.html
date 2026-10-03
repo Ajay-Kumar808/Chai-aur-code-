@@ -26,11 +26,17 @@ const starts = document.querySelector('#start')
 console.log(starts)
 starts.addEventListener('click', function(){
     console.log("Good evening")
-     clearInterval(intervalId)
+    //  clearInterval(intervalId)
+     setInterval(demo, 2000)
 })
 
 const stops = document.querySelector('#stop')
 console.log(stops)
+stops.addEventListener('click', function(){
+    console.log("good mornning")
+    // setInterval(demo, 2000)
+     clearInterval(intervalId)
+})
 
 
     </script>
