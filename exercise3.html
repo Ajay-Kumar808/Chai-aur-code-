@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    const h1 = document.createElement('h1')
+    console.log(h1)
+   const h2 = h1.setAttribute("id", "box1")
+   h1.innerText = "My Name is Ajay Kumar Sah"
+   const h3 = h1.innerHTML
+   console.log(h3)
+   document.body.appendChild(h1)
+
+   h1.setAttribute("class","heading")
+   const headings = document.querySelector('.heading')
+   console.log(headings)
+   headings.style.color = "blue"
+   headings.style.textAlign = "center"
+   </script>
+</body>
+</html>
