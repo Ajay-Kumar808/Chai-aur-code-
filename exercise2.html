@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Service</li>
+        </ul>
+    </div>
+
+    <script>    
+    const li1 = document.querySelectorAll('li:first-child')
+    console.log(li1)
+    li1[0].style.color = "red" 
+    li1[0].style.listStyle = "none"
+
+    const hold = li1[0].innerText = "ajay"
+    li1[0].style.color = "blue"
+    console.log(hold)
+    </script>
+</body>
+</html>
