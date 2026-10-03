@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello ajay kya tum thik ho </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>       
+    // setInterval(function(){
+    //     console.log("hi sah")
+    // },4000)
+
+
+    const demo = function(){
+        console.log("hello how are you")
+    }
+   const intervalId = setInterval(demo, 2000)
+//    clearInterval(intervalId)
+
+const starts = document.querySelector('#start')
+console.log(starts)
+starts.addEventListener('click', function(){
+    console.log("Good evening")
+     clearInterval(intervalId)
+})
+
+const stops = document.querySelector('#stop')
+console.log(stops)
+
+
+    </script>
+</body>
+</html>
