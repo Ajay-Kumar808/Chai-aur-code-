@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code </h1>
+    <button id="stop">Stop</button>
+
+    <script>
+
+        const demo = function(){
+            console.log("hi ajay")
+        }
+        setTimeout(demo,2000)
+
+        const textChange = function(){
+            const h1 = document.querySelector('h1')
+               h1.innerHTML = "Offer this time"
+            console.log(h1)
+        }
+      const changeMe =  setTimeout(textChange,5000)
+        // clearTimeout(changeMe)
+
+      const stops = document.querySelector('#stop')
+      console.log(stops)
+      stops.addEventListener('click',function(e){
+         clearTimeout(changeMe)
+        console.log("this is stoped")
+       
+      })
+
+
+        // setTimeout(function(){
+        //     console.log("Hi am ajay")
+        // }, 5000)   /*setTimeout bolta hai ki mai kuch second baad ek baar ise print kr duga */
+                   /*setInterval bolta hai ki mai kuch second baad baar baar print kr duga*/        
+    </script>
+</body>
+</html>
