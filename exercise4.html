@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 220px;
+            border: 1px solid;
+            margin: 100px auto;
+            display: flex;
+            column-gap: 20px;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+        .container div:first-child{
+               background-color: red;
+        }
+        .container div:nth-child(2){
+               background-color: green;
+        }
+        .container div:nth-child(3){
+               background-color: yellow;
+        }
+        
+        .container div:last-child{
+               background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child-container1" id="box1"></div>
+        <div class="child-container1" id="box2"></div>
+        <div class="child-container1" id="box3"></div>
+        <div class="child-container1" id="box4"></div>
+    </div>
+
+    <script>
+        const containers = document.querySelectorAll('.child-container1')
+        console.log(containers)
+        const bodys = document.querySelector('body')
+        console.log(bodys)
+
+        containers.forEach(function(e){
+             e.addEventListener('click', function(l){
+               const f = l.target
+          console.log(f)   
+          console.log("clicked here")   
+            
+          if(l.target.id==='box1'){
+                bodys.style.backgroundColor = "red"
+          }
+         
+         else if(l.target.id==='box2'){
+                bodys.style.backgroundColor = "green"
+          }
+         else if(l.target.id==='box3'){
+                bodys.style.backgroundColor = "yellow"
+          }
+         else if(l.target.id==='box4'){
+                bodys.style.backgroundColor = "blue"
+          }
+         
+
+           })
+        })
+        // const event = containers.addEventListener('click', function(e){
+        //   console.log("clicked here")
+        // })
+
+    </script>
+</body>
+</html>
