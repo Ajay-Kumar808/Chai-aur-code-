@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 150px;
+            height: 100px;
+              margin: 200px auto;
+              column-gap: 30px;
+        }
+        button{
+            margin: 10px;
+            padding: 16px;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Count: <span>0</span></h2>
+        <button id="increase"  onclick="demo()">+</button>
+        <button id="decrease" onclick="demo2()">-</button>
+    </div>
+    <script>
+      
+     const increases = document.getElementById('increase')
+     const decreases = document.getElementById('decrease')
+     const h2 = document.querySelector('span')
+     console.log(h2)
+       
+
+     let a = 0;      
+     function demo(){
+        a++;
+        h2.innerText = a
+        console.log(a)
+    }
+     function demo2(){
+        a--;
+        h2.innerText = a
+        console.log(a)
+    }
+    </script>
+</body>
+</html>
