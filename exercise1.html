@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="first">Hello everyone good mornning</h1>
+    <p>My name is ajay kumar sah and i am from ballia utter pradesh</p>
+    <span>I have complecte my deploma form government polytechin mau</span>
+    <div>
+        <ul class="query">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Service</li>
+        </ul>
+    </div>
+
+
+    <script>
+        const firsts = document.getElementById('first')
+        console.log(firsts)
+     const firsts1 = firsts.id
+     console.log(firsts1)
+     const firsts2 = firsts.getAttribute("id")
+     console.log(firsts2)
+     const first3 = firsts.innerText
+     console.log(first3)  
+     firsts.style.color = "red"  
+     firsts.style.textAlign = "center"
+     firsts.style.margin = "30px 0px 60px 0px"
+     firsts.style.display = "inline-block"
+     firsts.style.height = "100px"
+     firsts.setAttribute("class","heading1")
+
+     const headings = document.getElementsByClassName('heading1')
+     console.log(headings)
+      headings[0].style.backgroundColor = "yellow"
+    for(let i=0; i<headings.length; i++){
+        headings[i].style.borderRadius = "50px"
+    }
+  const heading2 = Array.from(headings)
+  console.log(heading2)
+  heading2.forEach(function(e){
+        e.style.border = "1px solid green"
+    })
+  
+
+   const p = document.getElementsByTagName('p')
+   console.log(p)
+   p[0].style.color = "blue"
+    p[0].style.textAlign = "center"
+     p[0].style.display = "inline"
+
+
+
+   const query = document.querySelector('.query')
+   console.log(query)
+  const query1 = query.innerText
+  console.log(query1)
+
+  query.style.color = "red"
+  query.style.textAlign = "center"
+  query.style.listStyle = "none"
+  query.style.display = "flex"
+  query.style.justifyContent = "space-between"
+
+
+  
+  
+    </script>
+</body>
+</html>
