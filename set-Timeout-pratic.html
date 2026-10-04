@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SetTimeout</h1>
+    <h2>My name is ajay kumar</h2>
+    <button id="stop">Stop</button>
+    <script>
+        // setTimeout(function(){
+        //     console.log("hi ajay")
+        // },2000)
+        
+
+        // const demo = function(){
+        //     console.log("hi ajay second")
+        // }
+        //  const stop = setTimeout(demo,3000)
+        //  clearTimeout(stop)
+
+
+        //  const h2 = document.querySelector('h2')
+        //  console.log(h2)
+        //  const demo2 = function(){
+        //      h2.innerText = "You name is change ajay"
+        //  }
+        //  setTimeout(demo2, 4000)
+
+
+       const h3 = document.querySelector('h2')
+       console.log(h3)
+       const demo3 = function(){
+        h3.innerText = "hi ajay"
+       }
+     const stopChange = setTimeout(demo3, 2000)
+
+     const stops = document.getElementById('stop')
+         stops.addEventListener('click', function(){
+               clearTimeout(stopChange)
+                console.log("this is stoped")
+        })
+    </script>
+</body>
+</html>
