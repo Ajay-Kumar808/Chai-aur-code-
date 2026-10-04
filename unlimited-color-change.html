@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chia aur javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        const randomColor = function(){
+            const hex = '0123456789ABCDEF'
+            let color = '#'
+            for(let i=0; i<6; i++){
+                color += hex[Math.floor((Math.random()*16))]
+            }
+            return color;
+        }
+        console.log(randomColor())
+
+
+
+        const starts = document.querySelector('#start')
+        console.log(starts)
+
+    
+         starts.addEventListener('click',function(){
+            let demo = function(){
+                document.body.style.backgroundColor = randomColor()
+            }
+           const a =  setInterval(demo,1000)
+         })
+   
+
+
+        const stops = document.querySelector('#stop')
+        console.log(stops)
+        stops.addEventListener('click',function(){
+            clearInterval(a)
+        })
+
+
+       // console.log(Math.floor((Math.random()*16))) /* iska mtlab hai 0 se 10 tak ank aayege*/
+                                       /*ager aap +1 krte hai to 1 se 10 tak ank aayege lekin 0 nhi aayega thik*/
+
+    </script>
+</body>
+</html>
