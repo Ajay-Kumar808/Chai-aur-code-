@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is set Interval</h1>
+    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+    <button id="stop">Stop</button>
+
+    <script>
+        // setInterval(function(){
+        //     console.log("Hello ji")
+        // }, 2000)
+
+        // const demo = function(){
+        //     console.log("Hello good boy")
+        // }
+        // setInterval(demo, 3000)
+
+
+        const p = document.querySelector('p')
+        console.log(p)
+        const demo = function(){
+            p.innerText = "hi ajay"
+            console.log("hi")
+        }
+      const stopTextChange = setInterval(demo, 2000)
+
+      const stops = document.querySelector('#stop')
+      stops.addEventListener('click',function(){
+        clearInterval(stopTextChange)
+      })
+
+
+    </script>
+</body>
+</html>
